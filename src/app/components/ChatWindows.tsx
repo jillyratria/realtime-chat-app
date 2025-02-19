@@ -18,8 +18,6 @@ export function ChatWindows() {
       transports: ["websocket"],
     });
 
-    console.log("socket", socket.listeners);
-
     socket.on("receive_message", (message: Message) => {
       setMessages((prevMessages) => [...prevMessages, message]);
 
