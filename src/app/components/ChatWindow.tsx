@@ -32,8 +32,8 @@ export function ChatWindow(props: ChatWindowProps) {
   };
 
   const colorClass: ColorClass = {
-    blue: "bg-blue-100",
-    green: "bg-green-100",
+    blue: "bg-blue-800",
+    green: "bg-green-800",
   };
 
   return (

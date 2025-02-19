@@ -15,7 +15,7 @@ export default {
       keyframes: {
         flash: {
           "0%, 100%": { backgroundColor: "white" },
-          "50%": { backgroundColor: "#f0f9ff" },
+          "50%": { backgroundColor: "yellow" },
         },
       },
       animation: {

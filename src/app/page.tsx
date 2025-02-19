@@ -1,7 +1,4 @@
+import { ChatWindows } from "./components/ChatWindows";
 export default function Page() {
-  return (
-    <main>
-      <h1>Page</h1>
-    </main>
-  );
+  return <ChatWindows />;
 }
