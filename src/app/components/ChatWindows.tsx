@@ -4,11 +4,15 @@ import { useState, useEffect } from "react";
 import { io, Socket } from "socket.io-client";
 import { ChatWindow } from "./ChatWindow";
 import type { Message, Sender } from "./ChatWindow";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 let socket: Socket;
 
 export function ChatWindows() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useLocalStorage<Message[]>(
+    "chat-messages",
+    []
+  );
 
   const [rightFlash, setRightFlash] = useState(false);
   const [leftFlash, setLeftFlash] = useState(false);
@@ -33,6 +37,7 @@ export function ChatWindows() {
     return () => {
       socket.disconnect();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onSendMessage = (content: string, sender: Sender) => {
