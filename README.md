@@ -30,3 +30,4 @@ yarn server
 - tailwind
 
 ## Screenshot
+![Screenshot 2025-06-15 at 12 43 59](https://github.com/user-attachments/assets/7523c3bf-fa7c-4ee9-b8ff-0dd51e3ced9b)
